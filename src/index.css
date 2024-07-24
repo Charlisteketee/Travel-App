@@ -11,6 +11,10 @@ html, body {
   min-height: 100vh;
 } */
 
+h1 {
+  font-family: 'Libre Baskerville', sans-serif;
+}
+
 /* Ensures the main content takes up the remaining space */
 main {
   flex: 1; 

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import '../styles/Trips.css';
 
 const tripsData = [
   { id: 1, title: 'Hiking in the Alps' },
@@ -9,9 +10,9 @@ const tripsData = [
 
 const Trips = () => {
   return (
-    <div>
+    <div className="trips">
       <h1>Trips</h1>
-      <ul>
+      <ul className="tripLink">
         {tripsData.map(trip => (
           <li key={trip.id}>
             <Link to={`/trips/${trip.id}`}>{trip.title}</Link>
