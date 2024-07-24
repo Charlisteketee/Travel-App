@@ -1,0 +1,10 @@
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(12, 148, 148, 0.705);
+  padding: 0 20px;
+  color: white;
+  margin-top: auto; /* Pushes footer to the bottom */
+
+}

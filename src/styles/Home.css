@@ -12,7 +12,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ensures the image covers the entire area */
-  filter: blur(5px); /* Adding blur effect */
+  /* filter: blur(2px); */
 }
 
 .homeContent {
@@ -23,4 +23,26 @@
   text-align: center;
   color: white;
   z-index: 1; /* Ensures content is above the background */
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.homeButton {
+  background-color: rgba(12, 148, 148, 0.705);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.homeButton:hover {
+  background-color: rgba(12, 148, 148, 1);
 }

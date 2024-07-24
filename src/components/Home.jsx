@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import '../styles/Home.css';
 import backgroundImage from '../styles/background.jpg';
 
@@ -7,8 +8,12 @@ const Home = () => {
     <div className="homeBackground">
       <img src={backgroundImage} alt="background" />
       <div className="homeContent">
-        <h1>Welcome!</h1>
-        <p>Explore amazing trips and adventures around the world through stories, images, and connecting with others.</p>
+        <h1>Come Explore with us!</h1>
+        <div className="buttons">
+          {/* <Link to="/trips?filter=destinations" className="homeButton">Destinations</Link>
+          <Link to="/trips?filter=hikes" className="homeButton">Hikes</Link> */}
+          <Link to="/photos" className="homeButton">Photos</Link>          
+        </div>
       </div>
     </div>
   );

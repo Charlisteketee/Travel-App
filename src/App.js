@@ -7,6 +7,8 @@ import Contact from './components/Contact';
 import Trips from './components/Trips';
 import Trip from './components/Trip';
 import './App.css';
+import Footer from './components/Footer';
+import Photos from './components/Photos';
 
 function App() {
   return (
@@ -18,7 +20,9 @@ function App() {
         <Route path='/contact' Component={Contact} />
         <Route path='/trips' Component={Trips} />
         <Route path='/trips/:id' Component={Trip} />
+        <Route path='/photos' Component={Photos} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
