@@ -1,0 +1,18 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(12, 148, 148, 0.705);
+  color: white;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  margin: 10%;
+  color: white;
+
+}
