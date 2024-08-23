@@ -9,20 +9,19 @@ import Trip from './components/Trip';
 import './App.css';
 import Footer from './components/Footer';
 import Photos from './components/Photos';
-// import { MongoClient } = require("mongodb");
-// import uri = require("../atlas_uri")
+
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route exact path='/' Component={Home} />
-        <Route path='/about' Component={About} />
-        <Route path='/contact' Component={Contact} />
-        <Route path='/trips' Component={Trips} />
-        <Route path='/trips/:id' Component={Trip} />
-        <Route path='/photos' Component={Photos} />
+        <Route exact path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/trips' element={<Trips />} />
+        <Route path='/trips/:id' element={<Trip />} />
+        <Route path='/photos' element={<Photos />} />
       </Routes>
       <Footer />
     </Router>

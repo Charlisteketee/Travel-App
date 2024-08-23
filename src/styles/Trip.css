@@ -1,0 +1,40 @@
+
+
+.trip-title {
+  font-size: 2em;
+  /* display: flex;
+  justify-content: center; */
+  margin-left: 5%;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+.trip-photo {
+  width: 80%;
+  max-width: 700px;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.trip-content {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  
+}
+
+.affiliate-links-title {
+  margin-left: 5%;
+}
+
+.affiliate-links {
+  list-style-type: none;
+  margin-left: 5%;
+}
+
+.affiliate-links li {
+  margin-bottom: 10px;
+}

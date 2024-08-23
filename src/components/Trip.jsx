@@ -1,27 +1,45 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { getTripById } from '../api/trips';
+import '../styles/Trip.css';
 
-const tripsData = [
-  { id: 1, title: 'Hiking in the Alps', content: 'Story about hiking in the Alps...', imageUrl: 'image_url_here', affiliateLinks: ['link1', 'link2'] },
-  { id: 2, title: 'Biking through Amsterdam', content: 'Story about biking through Amsterdam...', imageUrl: 'image_url_here', affiliateLinks: ['link1', 'link2'] },
-  // Add more trips here
-];
 
 const Trip = () => {
   const { id } = useParams();
-  const trip = tripsData.find(trip => trip.id === parseInt(id));
+  const [trip, setTrip] = useState(null);
+
+  useEffect(() => {
+    const fetchTrip = async () => {
+      try {
+        const fetchedTrip = await getTripById(id);
+        setTrip(fetchedTrip);
+      } catch (error) {
+        console.error('Failed to fetch trip', error);
+      }
+    };
+
+    fetchTrip();
+  }, [id]);
+
+  if (!trip) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <div>
-      <h1>{trip.title}</h1>
-      <img src={trip.imageUrl} alt={trip.title} />
-      <p>{trip.content}</p>
-      <h3>Affiliate Links:</h3>
+      <h1 className='trip-title'>{trip.title}</h1>
+      <img
+        className='trip-photo'
+        src={trip.imageUrl} 
+        alt={trip.title} 
+      />
+      <p className='trip-content'>{trip.content}</p>
+      {/* <h3 className='affiliate-links-title'>Affiliate Links:</h3>
       <ul>
         {trip.affiliateLinks.map((link, index) => (
           <li key={index}><a href={link}>Purchase here</a></li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 };
