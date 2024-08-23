@@ -9,6 +9,8 @@ import Trip from './components/Trip';
 import './App.css';
 import Footer from './components/Footer';
 import Photos from './components/Photos';
+// import { MongoClient } = require("mongodb");
+// import uri = require("../atlas_uri")
 
 function App() {
   return (

@@ -25,6 +25,10 @@
   z-index: 1; /* Ensures content is above the background */
 }
 
+.welcomeMessage {
+  font-size: 40px;
+}
+
 .buttons {
   margin-top: 20px;
 }

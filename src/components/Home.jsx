@@ -8,7 +8,7 @@ const Home = () => {
     <div className="homeBackground">
       <img src={backgroundImage} alt="background" />
       <div className="homeContent">
-        <h1>Come Explore with us!</h1>
+        <h1 className="welcomeMessage">Come Explore with us!</h1>
         <div className="buttons">
           {/* <Link to="/trips?filter=destinations" className="homeButton">Destinations</Link>
           <Link to="/trips?filter=hikes" className="homeButton">Hikes</Link> */}
