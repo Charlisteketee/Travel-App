@@ -27,19 +27,19 @@ const Trip = () => {
 
   return (
     <div>
-      <h1 className='trip-title'>{trip.title}</h1>
-      <img
-        className='trip-photo'
-        src={trip.imageUrl} 
-        alt={trip.title} 
-      />
-      <p className='trip-content'>{trip.content}</p>
-      {/* <h3 className='affiliate-links-title'>Affiliate Links:</h3>
-      <ul>
+      <h1 className="trip-title">{trip.title}</h1>
+      <div className="trip-photo-container">
+        <img src={trip.imageUrl} alt={trip.title} className="trip-photo" />
+      </div>
+      <div className="trip-content">{trip.content}</div>
+      <h3 className="affiliate-links-title">Affiliate Links:</h3>
+      <ul className="affiliate-links">
         {trip.affiliateLinks.map((link, index) => (
-          <li key={index}><a href={link}>Purchase here</a></li>
+          <li key={index}>
+            <a href={link} target="_blank" rel="noopener noreferrer">Purchase here</a>
+          </li>
         ))}
-      </ul> */}
+      </ul>
     </div>
   );
 };
