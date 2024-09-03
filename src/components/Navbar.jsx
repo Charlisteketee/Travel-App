@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <Link to="/" className="name">Meindy's Adventures</Link>
+      <Link to="/" className="name">A Way of Life</Link>
       <div className={`menu ${isMenuOpen ? 'open' : ''}`}>
         <ul>
           <li><Link to="/">Home</Link></li>
