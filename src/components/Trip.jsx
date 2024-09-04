@@ -26,7 +26,7 @@ const Trip = () => {
   }
 
   return (
-    <div>
+    <div className='trip'>
       <h1 className="trip-title">{trip.title}</h1>
       <div className="trip-photo-container">
         <img src={trip.imageUrl} alt={trip.title} className="trip-photo" />

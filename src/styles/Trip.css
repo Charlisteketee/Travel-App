@@ -1,10 +1,11 @@
-
+.trip {
+  padding-top: 70px;
+}
 
 .trip-title {
   font-size: 2em;
   text-align: center; /* Center the title */
-  margin-bottom: 30px;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .trip-photo-container {

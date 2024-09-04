@@ -37,10 +37,23 @@
   background-color: #f0f0f0; /* Background on hover */
 }
 
+.category-link.active {
+  font-weight: bold;
+  background-color: rgba(12, 148, 148, 0.5);
+}
+
+.tripLink {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Adjust the minimum size and number of columns */
+  gap: 20px; /* Space between grid items */
+  margin-top: 20px;
+  padding: 10px;
+}
+
 .trip-item {
   display: flex;
   align-items: flex-start; /* Align items to the top */
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   padding: 20px; /* Add padding inside the container */
   background-color: #f9f9f9; /* Background color for the container */
   border-radius: 10px; /* Round the edges of the container */
@@ -49,36 +62,32 @@
 }
 
 .trip-image {
-  width: 350px; /* Adjust to desired size */
-  height: 350px; /* Adjust to desired size */
-  margin-right: 10px;
-  margin-left: 10px;
-  /* margin-bottom: 10px; */
+  width: 100%;
+  height: 100%;
   border-radius: 10px; /* Round the edges */
   object-fit: cover;
 }
 
 .trip-content-container {
   display: flex;
+  align-items: center;
   flex-direction: column;
-  max-width: 370px;
 }
 
 .trip-title {
   color: black;
   font-size: x-large;
-  margin-left: 10px;
-  /* margin-bottom: 10px; */
 }
 
 .trip-content {
   color: #666;
   font-size: 0.9em;
-  margin-left: 10px;
+  /* margin-left: 10px; */
   overflow: hidden; /* Prevent overflow */
   text-overflow: ellipsis; /* Add ellipsis for overflowing text */
 }
 
 .tripLink span {
   vertical-align: middle;
+  
 }

@@ -3,16 +3,14 @@ import { Link, useLocation } from 'react-router-dom';
 import { getTrips } from '../api/trips';
 import '../styles/Trips.css';
 
-
 const Trips = () => {
   const [trips, setTrips] = useState([]);
   const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const filter = params.get('filter');
 
   useEffect(() => {
     const fetchTrips = async () => {
-      const params = new URLSearchParams(location.search);
-      const filter = params.get('filter');
-
       try {
         const allTrips = await getTrips();
         console.log(allTrips);
@@ -29,17 +27,33 @@ const Trips = () => {
     };
 
     fetchTrips();
-  }, [location.search]);
+  }, [filter]);
 
   return (
     <div className="trips">
       <div className="trips-header">
         <h1 className="trips-h1">Trips</h1>
         <div className="category-links">
-          <Link to="/trips?filter=hiking" className="category-link">Hikes</Link>
-          <Link to="/trips?filter=biking" className="category-link">Bike Rides</Link>
-          <Link to="/trips?filter=camping" className="category-link">Camping</Link>
-          {/* <Link to="/trips?filter=desert" className="category-link">Desert</Link> */}
+          <Link 
+            to="/trips?filter=hiking" 
+            className={`category-link ${filter === 'hiking' ? 'active' : ''}`}>
+            Hikes
+          </Link>
+          <Link 
+            to="/trips?filter=biking" 
+            className={`category-link ${filter === 'biking' ? 'active' : ''}`}>
+            Bike Rides
+          </Link>
+          <Link 
+            to="/trips?filter=camping" 
+            className={`category-link ${filter === 'camping' ? 'active' : ''}`}>
+            Camping
+          </Link>
+          <Link 
+            to="/trips?filter=canoeing" 
+            className={`category-link ${filter === 'canoeing' ? 'active' : ''}`}>
+            Canoeing
+          </Link>
         </div>
       </div>
       <ul className="tripLink">
@@ -56,7 +70,7 @@ const Trips = () => {
               <div className="trip-content-container">
                 <span className="trip-title">{trip.title}</span>
                 <p className="trip-content">
-                  {trip.content.slice(0, 100)}... {/* Truncated content */}
+                  {trip.content.slice(0, 200)}... {/* Truncated content */}
                 </p>
               </div>
             </Link>          
